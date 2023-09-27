@@ -1,0 +1,21 @@
+<div>
+  <h2>Conversor de Temperatura</h2>
+  <label for="num1">Ingrese un valor:</label>
+  <input type="text" id="num1" [(ngModel)]="num1" name="num1" placeholder="Ingrese un número">
+  
+  <br>
+  
+  <label>Seleccione la unidad:</label>
+  <input type="radio" [(ngModel)]="unidad" name="unidad" value="celsius"> Celsius
+  <input type="radio" [(ngModel)]="unidad" name="unidad" value="fahrenheit"> Fahrenheit
+
+  <br>
+
+  <button (click)="calcular()">Calcular</button>
+
+  <br>
+
+  <div *ngIf="resultado !== 0">
+    <p>Resultado: {{ resultado }} {{ unidad }}</p>
+  </div>
+</div>
