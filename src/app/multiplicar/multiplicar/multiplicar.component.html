@@ -1,0 +1,15 @@
+<div>
+    <label for="numero">Número:</label>
+    <input type="number" id="numero" [(ngModel)]="numero">
+  </div>
+  <div>
+    <label for="veces">Veces a sumar:</label>
+    <input type="number" id="veces" [(ngModel)]="vecesASumar">
+  </div>
+  <div>
+    <button (click)="sumar()">Sumar</button>
+  </div>
+  <div *ngIf="resultado">
+    <p>Resultado: {{ resultado }}</p>
+  </div>
+  
