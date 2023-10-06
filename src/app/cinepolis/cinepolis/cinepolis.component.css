@@ -7,18 +7,18 @@
   }
   
   .section {
-    border: 2px solid #ccc;
+    border: 2px solid #1616e5;
     padding: 20px;
     flex: 1;
     margin: 10px;
     text-align: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    background-color: #61b0d28d;
     border-radius: 10px;
   }
   
   .background {
-    background-image: url('https://thebrandinquirer.files.wordpress.com/2019/07/1-cinepolis-nuevo-redisencc83o-new-logo-redesign-2019-brand-my-f-opinion-1.png'); /* Reemplaza 'ruta-de-tu-imagen.jpg' con la ruta de tu imagen de fondo */
+    background-image: url('https://3.bp.blogspot.com/-ydAg6z0cUO0/VwZkuzsfCaI/AAAAAAAAJcc/wy38NAVeXPYvwTa07a_JsOnrdbeg_aG-Q/w1200-h630-p-k-no-nu/cinepolis_08_768.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -31,9 +31,9 @@
   
   .title {
     font-size: 36px;
-    color: #fff; /* Color del texto del título */
+    color: #ffffff; /* Color del texto del título */
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para que el texto sea legible */
+    background-color: rgba(0, 39, 231, 0.546); /* Fondo semitransparente para que el texto sea legible */
     padding: 20px;
     border-radius: 10px;
   }

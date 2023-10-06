@@ -10,6 +10,7 @@ export class CinepolisComponent {
   tieneTarjeta: boolean = false;
   cantidadBoletos: number = 0;
   precioAPagar: number = 0;
+  mostrarPrecio: boolean = false;
 
   calcularPrecio() {
     // Lógica para calcular el precio basado en las condiciones
@@ -29,6 +30,12 @@ export class CinepolisComponent {
   procesarPago() {
     // Aquí puedes implementar la lógica para procesar el pago si es necesario
     console.log('Procesando el pago...');
+
+    // Calcular el precio antes de mostrar la sección de precio final
+    this.calcularPrecio();
+
+    // Después de procesar el pago, muestra la sección de precio final
+    this.mostrarPrecio = true;
   }
 
   reiniciar() {
@@ -37,5 +44,6 @@ export class CinepolisComponent {
     this.tieneTarjeta = false;
     this.cantidadBoletos = 0;
     this.precioAPagar = 0;
+    this.mostrarPrecio = false; // Oculta la sección de precio final al reiniciar
   }
 }
