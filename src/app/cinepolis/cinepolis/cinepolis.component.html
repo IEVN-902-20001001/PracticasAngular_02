@@ -11,7 +11,11 @@
     <input type="radio" id="si" name="tarjeta" value="si" [(ngModel)]="tieneTarjeta"> Sí
     <input type="radio" id="no" name="tarjeta" value="no" [(ngModel)]="tieneTarjeta"> No
 
-    <label for="cantidadBoletos">Cantidad de boletos:</label>
+    <label for="cantidadCompradores">Número de Compradores:</label>
+    <input type="number" id="cantidadCompradores" [(ngModel)]="numeroCompradores">
+    <button (click)="actualizarNumeroCompradores()">Actualizar</button>
+
+    <label for="cantidadBoletos">Cantidad de boletos por comprador:</label>
     <input type="number" id="cantidadBoletos" [(ngModel)]="cantidadBoletos">
   </div>
 
@@ -25,7 +29,8 @@
   <div class="section" *ngIf="mostrarPrecio">
     <h2>Precio Final</h2>
     <p>Nombre: {{ nombre }}</p>
-    <p>Cantidad de boletos: {{ cantidadBoletos }}</p>
+    <p>Cantidad de compradores: {{ numeroCompradores }}</p>
+    <p>Cantidad de boletos por comprador: {{ cantidadBoletos }}</p>
     <p>Tarjeta CÍNECO: {{ tieneTarjeta ? 'Sí' : 'No' }}</p>
     <p>Precio a pagar: ${{ precioAPagar }}</p>
   </div>

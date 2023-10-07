@@ -8,11 +8,19 @@ import { Component } from '@angular/core';
 export class CinepolisComponent {
   nombre: string = '';
   tieneTarjeta: boolean = false;
+  numeroCompradores: number = 1; // Número de compradores
   cantidadBoletos: number = 0;
   precioAPagar: number = 0;
   mostrarPrecio: boolean = false;
+  limiteBoletosPorComprador: number = 7; // Límite de boletos por comprador
 
   calcularPrecio() {
+    // Verificar que la cantidad de boletos no exceda el límite permitido
+    const limiteMaximo = this.numeroCompradores * this.limiteBoletosPorComprador;
+    if (this.cantidadBoletos > limiteMaximo) {
+      this.cantidadBoletos = limiteMaximo;
+    }
+
     // Lógica para calcular el precio basado en las condiciones
     if (this.cantidadBoletos <= 2) {
       this.precioAPagar = this.cantidadBoletos * 12;
@@ -42,8 +50,14 @@ export class CinepolisComponent {
     // Limpiar los campos y precio
     this.nombre = '';
     this.tieneTarjeta = false;
+    this.numeroCompradores = 1;
     this.cantidadBoletos = 0;
     this.precioAPagar = 0;
     this.mostrarPrecio = false; // Oculta la sección de precio final al reiniciar
+  }
+
+  // Función para actualizar el número de compradores
+  actualizarNumeroCompradores() {
+    this.calcularPrecio(); // Recalcula el precio al actualizar el número de compradores
   }
 }
