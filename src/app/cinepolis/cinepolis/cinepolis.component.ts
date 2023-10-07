@@ -19,6 +19,7 @@ export class CinepolisComponent {
     const limiteMaximo = this.numeroCompradores * this.limiteBoletosPorComprador;
     if (this.cantidadBoletos > limiteMaximo) {
       this.cantidadBoletos = limiteMaximo;
+      alert('El limite es 7 boletos por persona, reincie el sistema de pago')
     }
 
     // Lógica para calcular el precio basado en las condiciones
